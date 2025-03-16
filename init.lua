@@ -613,6 +613,14 @@ require('lazy').setup({
   },
 
   {
+    'barrett-ruth/import-cost.nvim',
+    build = 'sh install.sh npm',
+    config = function()
+      require('import-cost').setup {}
+    end,
+  },
+
+  {
     'kdheepak/lazygit.nvim',
     lazy = true,
     cmd = {
@@ -1256,7 +1264,7 @@ require('lazy').setup({
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        javascript = { 'prettier', stop_after_first = true },
+        javascript = { 'prettierd', 'prettier', stop_after_first = true },
       },
     },
   },
